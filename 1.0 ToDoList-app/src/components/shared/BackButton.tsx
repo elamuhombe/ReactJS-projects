@@ -1,13 +1,14 @@
-import{ FC, ReactElement } from 'react';
+import { FC } from 'react';
+
 
 interface BackButtonProps {
-  icon: ReactElement | null; // Define the icon prop
+  onClick: () => void;
 }
 
-const BackButton: FC<BackButtonProps> = ({ icon }) => {
+const BackButton: FC<BackButtonProps> = ({ onClick }) => {
   return (
-    <div>
-      {icon} {/* Render the provided icon */}
+    <div className="bg-white rounded-full w-10 h-10 flex justify-center items-center shadow-md cursor-pointer" onClick={onClick}>
+  
     </div>
   );
 };
