@@ -1,11 +1,15 @@
+import{ FC, ReactElement } from 'react';
 
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';  // Example icon
-
-export default function BackButton() {
-  return (
-    <div className='bg-white border-radius-full w-20 h-20'>
-     <ChevronLeftIcon />
-      
-    </div>
-  )
+interface BackButtonProps {
+  icon: ReactElement | null; // Define the icon prop
 }
+
+const BackButton: FC<BackButtonProps> = ({ icon }) => {
+  return (
+    <div>
+      {icon} {/* Render the provided icon */}
+    </div>
+  );
+};
+
+export default BackButton;
